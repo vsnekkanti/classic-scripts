@@ -1,0 +1,9 @@
+# This script will keep the computer awake by pressing the ScrollLock key periodically
+Add-Type -AssemblyName "System.Windows.Forms"
+while ($true) {
+    [System.Windows.Forms.SendKeys]::SendWait("{SCROLLLOCK}")
+    Start-Sleep -Seconds 30
+}
+
+
+powershell -ExecutionPolicy Bypass -File "path\to\keepActive.ps1"
